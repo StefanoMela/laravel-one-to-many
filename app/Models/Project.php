@@ -13,6 +13,17 @@ class Project extends Model
         'title',
         'description',
         'slug',
-        'url'
+        'url',
+        'type_id'
     ];
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
+    public function getBadge()
+    {
+        return $this->type ? "<span class='badge' style='background-color:{$this->type->color}'>{$this->type->label}</span>" : "Uncategorized" ;
+    }
 }

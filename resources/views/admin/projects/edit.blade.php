@@ -2,7 +2,7 @@
 
 @section('content')
 <h1 class="mt-2 text-center">Modifica Progetto</h1>
-<div class="container my-2 d-flex justify-content-center">
+<div class="container">
     @if ($errors->any())
     <div class="alert alert-danger">
         <h4>Correggi i seguenti errori</h4>
@@ -13,6 +13,8 @@
         </ul>
     </div>
     @endif
+</div>
+<div class="container my-2 d-flex justify-content-center">
     <form action="{{route('admin.projects.update', $project)}}" method="POST" class="row">
         @csrf
         @method('PUT')
