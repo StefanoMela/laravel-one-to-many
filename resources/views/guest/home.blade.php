@@ -3,7 +3,7 @@
 @section('content')
 <section class="container my-5">
   <h1>{{ $title }}</h1>
-  <h5>Fai log in per vedere tutti i progetti</h5>
+  <h5>Clicca <a href="{{route('guest.all')}}">qui</a> per vedere tutti i progetti</h5>
   @foreach ($projects as $project)
   <div class="card my-4 h-100">
     <div class="card-body text-center">

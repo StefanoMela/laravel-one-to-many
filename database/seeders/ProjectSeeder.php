@@ -20,7 +20,7 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        $type_ids = Type::all()->pluck('id');
+        $type_ids = Type::all()->pluck('id')->toArray();
         $type_ids[] = null;
 
         for ($i = 0; $i < 50; $i++) {

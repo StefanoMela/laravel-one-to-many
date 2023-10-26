@@ -19,7 +19,7 @@ class TypeSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        $_types = ['front-end','back-end','full-stack'];
+        $_types = ['Front-end','Back-end','Full-stack'];
 
         foreach ($_types as $_type)
         {

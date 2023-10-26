@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\StoreProjectRequest;
 use App\Http\Requests\Auth\UpdateProjectRequest;
-
+use App\Models\Type;
 use Illuminate\Support\Str;
+use Termwind\Components\Dd;
 
 class ProjectController extends Controller
 {
@@ -31,7 +32,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::all();
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
@@ -76,8 +78,8 @@ class ProjectController extends Controller
     {
 
         // $project = Project::findOrFail($id) -> metodo usabile quando non usiamo la dependecy injection
-
-        return view("admin.projects.edit", compact("project"));
+        $types = Type::all();
+        return view("admin.projects.edit", compact("project","types"));
     }
 
     /**

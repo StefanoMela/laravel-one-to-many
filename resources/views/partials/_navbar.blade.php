@@ -8,8 +8,8 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link {{ Route::currentRouteName() == 'guest.home' ? 'active' : '' }}"
-            href="{{ route('guest.home') }}" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
+          <a class="nav-link {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}"
+            href="{{ route('admin.projects.index') }}" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
         </li>
         @guest
           <li class="nav-item">
@@ -22,7 +22,7 @@
           @endif
         @else
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.projects.index') }}">Progetti</a>
+          <a class="nav-link" href="{{ route('admin.projects.create') }}">Crea Progetto</a>
         </li>
           <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

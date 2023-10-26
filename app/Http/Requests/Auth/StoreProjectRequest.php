@@ -31,6 +31,7 @@ class StoreProjectRequest extends FormRequest
             'title'=>'required|string',
             'description'=>'required|string',
             'url'=>'required|string',
+            'type_id'=>'nullable|exists:types,id'
         ];
     }
 
@@ -44,6 +45,7 @@ class StoreProjectRequest extends FormRequest
             'description.string'=> 'La descrizione deve essere una stringa',
             'url.required'=> 'L\'url non deve essere vuoto',
             'url.string'=> 'L\'url deve essere una stringa',
+            'type_id.exists'=>'La categoria non è valida'
 
         ];
     }
