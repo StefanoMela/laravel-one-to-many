@@ -4,6 +4,7 @@
   <section class="container my-5">
     <h1 class="text-center">{{ $title }}</h1>
     <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Crea il tuo progetto</a>
+    <a href="{{ route('admin.types.index') }}" class="btn btn-primary">Crea il tuo tipo di progetto</a>
     @foreach ($projects as $project)
     <div class="card my-4 h-100">
       <div class="card-body text-center">
